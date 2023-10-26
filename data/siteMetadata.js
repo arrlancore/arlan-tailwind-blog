@@ -1,14 +1,14 @@
 /** @type {import("pliny/config").PlinyConfig } */
 const siteMetadata = {
-  title: 'Next.js Starter Blog',
-  author: 'Tails Azimuth',
-  headerTitle: 'TailwindBlog',
-  description: 'A blog created with Next.js and Tailwind.css',
-  language: 'en-us',
+  title: 'Cerita Developer',
+  author: 'Developer',
+  headerTitle: 'cerita.dev',
+  description: 'Lesson learn from a software developer',
+  language: 'id',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
-  siteRepo: 'https://github.com/timlrx/tailwind-nextjs-starter-blog',
-  siteLogo: '/static/images/logo.png',
+  siteUrl: 'https://cerita.dev',
+  siteRepo: 'https://github.com/arrlancore/crtadv',
+  siteLogo: '/static/images/logo.webp',
   socialBanner: '/static/images/twitter-card.png',
   mastodon: 'https://mastodon.social/@mastodonuser',
   email: 'address@yoursite.com',
@@ -17,7 +17,7 @@ const siteMetadata = {
   facebook: 'https://facebook.com',
   youtube: 'https://youtube.com',
   linkedin: 'https://www.linkedin.com',
-  locale: 'en-US',
+  locale: 'id-ID',
   analytics: {
     // If you want to use an analytics provider you have to add it to the
     // content security policy in the `next.config.js` file.
@@ -51,10 +51,10 @@ const siteMetadata = {
     giscusConfig: {
       // Visit the link below, and follow the steps in the 'configuration' section
       // https://giscus.app/
-      repo: process.env.NEXT_PUBLIC_GISCUS_REPO,
-      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID,
-      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY,
-      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID,
+      repo: process.env.NEXT_PUBLIC_GISCUS_REPO || 'arrlancore/crtadv',
+      repositoryId: process.env.NEXT_PUBLIC_GISCUS_REPOSITORY_ID || 'R_kgDOKfUiow',
+      category: process.env.NEXT_PUBLIC_GISCUS_CATEGORY | 'Announcements',
+      categoryId: process.env.NEXT_PUBLIC_GISCUS_CATEGORY_ID || 'DIC_kwDOKfUio84Cadre',
       mapping: 'pathname', // supported options: pathname, url, title
       reactions: '1', // Emoji reactions: 1 = enable / 0 = disable
       // Send discussion metadata periodically to the parent window: 1 = enable / 0 = disable

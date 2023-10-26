@@ -5,19 +5,23 @@ import Link from './Link'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
 import SearchButton from './SearchButton'
+import Image from 'next/image'
 
 const Header = () => {
+  const siteTitle = siteMetadata.headerTitle.split('.')[0]
+  const siteTitlePostfix = siteMetadata.headerTitle.split('.')[1]
   return (
     <header className="flex items-center justify-between py-10">
       <div>
         <Link href="/" aria-label={siteMetadata.headerTitle}>
           <div className="flex items-center justify-between">
-            <div className="mr-3">
-              <Logo />
-            </div>
+            {/* <div className="mr-3">
+              <Image width={48} height={48} alt="logo" src="/static/images/logo-256.webp" />
+            </div> */}
             {typeof siteMetadata.headerTitle === 'string' ? (
               <div className="hidden h-6 text-2xl font-semibold sm:block">
-                {siteMetadata.headerTitle}
+                {siteTitle}
+                <span className='text-slate-600'>.{siteTitlePostfix}</span>
               </div>
             ) : (
               siteMetadata.headerTitle
