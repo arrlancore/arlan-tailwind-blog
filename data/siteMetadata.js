@@ -2,7 +2,7 @@
 const siteMetadata = {
   title: 'Cerita Developer',
   author: 'Developer',
-  headerTitle: 'cerita.dev',
+  headerTitle: 'Cerita.dev',
   description: 'Lesson learn from a software developer',
   language: 'id',
   theme: 'system', // system, dark or light
