@@ -1,0 +1,34 @@
+---
+title: Cara Submit Form HTML Dengan Button Yang Berada Diluar Form
+date: '2023-11-28'
+tags: ['html', 'snippet', 'form']
+draft: false
+summary: Ternyata button ngga harus selalu berada di dalam form.
+---
+
+Saat bekerja dengan form input, biasanya kita gak bisa selalu menggabungkan `button` submit form dengan element form itu sendiri. Ada kalanya form yang kita buat itu harus dapat diakses dari luar form tersebut. Contohnya pada gambar dibawah ini, pada form sebelah kiri `button` submit berada didalam form itu sendiri dan di sebelah kanan `button` submit berada difooter atau dengan kata lain tidak berada di dalam form elemen tersebut.
+
+![Submit Form Position](/static/images/submit-form-position.png)
+
+Ternyata kita bisa menempatkan sebuah tombol atau button diluar form, untuk men-trigger `onsubmit` event pada sebuah form. Syaratnya form harus di beri sebuah id, contohnya `<form id="form-contact" ...` kemudian pada button submit kita tinggal refer dengan memberi properti form pada button seperti `<button form="form-contact" ...`
+
+Contoh lengkapnya seperti dibawah ini:
+
+```html
+<div>
+  <form id="form-contact">
+    <label for="name">Nama:</label>
+    <input type="text" name="name"></input>
+    <label for="email">Email:</label>
+    <input type="email" name="email"></input>
+  </form>
+
+  <!-- element lain bisa ada disini -->
+
+  <button type="submit" form="form-contact">Submit</button>
+</div>
+```
+
+Semoga bermanfaat!
+
+*Note: Artikel ini pertama kali saya publish di kodekoki.com
